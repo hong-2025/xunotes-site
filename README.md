@@ -29,10 +29,9 @@
 | A | @ | 185.199.109.153 |
 | A | @ | 185.199.110.153 |
 | A | @ | 185.199.111.153 |
-| CNAME | www | YOUR-GITHUB-USERNAME.github.io |
+| CNAME | www | hong-2025.github.io |
 
-将 `YOUR-GITHUB-USERNAME` 替换成 GitHub 用户名。第一轮配置时建议将
-Cloudflare 的 `Proxy status` 设为 `DNS only`。
+第一轮配置时建议将 Cloudflare 的 `Proxy status` 设为 `DNS only`。
 
 DNS 生效后，在 GitHub Pages 设置中打开 `Enforce HTTPS`。DNS 更新可能需要
 最长 24 小时，HTTPS 选项也可能不会立刻出现。
