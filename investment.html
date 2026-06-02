@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Xu Notes</title>
+    <title>投资记录 | Xu Notes</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -16,16 +16,22 @@
           <button class="language-switch" type="button" data-language-switch>English</button>
         </nav>
       </header>
-      <main class="inner-main">
-        <a class="back-link" href="./index.html" data-i18n="categoryPage.back">返回首页</a>
-        <p class="eyebrow">XU NOTES</p>
-        <h1 id="category-title">栏目</h1>
-        <p class="page-intro" id="category-description"></p>
-        <div class="article-list" id="article-list">
-          <p class="empty-state" data-i18n="categoryPage.empty">
-            这个栏目正在整理中，新的内容会陆续发布。
-          </p>
+      <main class="inner-main investment-detail">
+        <a class="back-link" href="./category.html?category=investment" data-i18n="investment.back">返回投资栏目</a>
+        <p class="eyebrow" data-i18n="investment.eyebrow">INVESTMENT NOTE</p>
+        <div class="investment-title-row">
+          <h1 id="investment-title">投资标的</h1>
+          <span class="status-pill" id="investment-status"></span>
         </div>
+        <div class="tag-list" id="investment-tags"></div>
+        <p class="page-intro" id="investment-summary"></p>
+        <section class="thesis-panel">
+          <h2 data-i18n="investment.thesis">投资逻辑</h2>
+          <ol id="investment-thesis"></ol>
+        </section>
+        <p class="investment-disclaimer" data-i18n="investment.disclaimer">
+          本页仅为个人投资记录，不构成投资建议。
+        </p>
       </main>
       <footer class="inner-footer">
         <p>© 2026 Xu Notes</p>
@@ -34,6 +40,6 @@
     </div>
     <script src="./site.js"></script>
     <script src="./investments.js"></script>
-    <script src="./category.js"></script>
+    <script src="./investment.js"></script>
   </body>
 </html>

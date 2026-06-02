@@ -272,6 +272,109 @@ a.category-card:hover {
   font-size: 0.9rem;
 }
 
+.investment-card {
+  color: var(--ink);
+  text-decoration: none;
+  transition: 160ms ease;
+}
+
+.investment-card:hover {
+  border-color: rgba(183, 100, 63, 0.46);
+  transform: translateY(-2px);
+}
+
+.investment-heading,
+.investment-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.investment-code {
+  color: var(--muted);
+  font-family: Arial, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+.status-pill,
+.tag-list span {
+  display: inline-block;
+  padding: 3px 9px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--accent);
+  font-family: Arial, sans-serif;
+  font-size: 0.72rem;
+  line-height: 1.5;
+}
+
+.status-pill {
+  flex: 0 0 auto;
+  border-color: rgba(183, 100, 63, 0.42);
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 9px 0 11px;
+}
+
+.tag-list span {
+  color: var(--muted);
+}
+
+.card-action {
+  display: inline-block;
+  margin-top: 14px;
+  color: var(--accent);
+  font-size: 0.82rem;
+}
+
+.investment-detail {
+  max-width: 840px;
+}
+
+.investment-title-row h1 {
+  margin-bottom: 0;
+}
+
+.thesis-panel {
+  margin-top: 28px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+.thesis-panel h2 {
+  margin-bottom: 12px;
+  font-size: 1.25rem;
+}
+
+.thesis-panel ol {
+  margin: 0;
+  padding-left: 1.4rem;
+}
+
+.thesis-panel li {
+  margin-bottom: 10px;
+  color: var(--muted);
+}
+
+.thesis-panel li:last-child {
+  margin-bottom: 0;
+}
+
+.investment-disclaimer {
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
 .message-form {
   display: grid;
   gap: 12px;

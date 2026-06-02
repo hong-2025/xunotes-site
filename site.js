@@ -28,6 +28,13 @@ const XuNotes = (() => {
         back: "返回首页",
         empty: "这个栏目正在整理中，新的内容会陆续发布。",
       },
+      investment: {
+        eyebrow: "INVESTMENT NOTE",
+        back: "返回投资栏目",
+        viewDetails: "查看详细信息",
+        thesis: "投资逻辑",
+        disclaimer: "本页仅为个人投资记录，不构成投资建议。",
+      },
       exchange: {
         eyebrow: "EXCHANGE",
         title: "交流",
@@ -81,6 +88,13 @@ const XuNotes = (() => {
       categoryPage: {
         back: "Back to home",
         empty: "This section is being organized. New notes will be published here.",
+      },
+      investment: {
+        eyebrow: "INVESTMENT NOTE",
+        back: "Back to investing",
+        viewDetails: "View details",
+        thesis: "Investment thesis",
+        disclaimer: "This page is a personal investment note and does not constitute investment advice.",
       },
       exchange: {
         eyebrow: "EXCHANGE",
