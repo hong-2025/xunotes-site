@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>交流 | Xu Notes</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="./index.html">Xu Notes</a>
+        <nav class="site-nav" aria-label="主要导航">
+          <a href="./index.html#about" data-i18n="nav.about">关于</a>
+          <a href="./exchange.html" data-i18n="nav.exchange">交流</a>
+          <button class="language-switch" type="button" data-language-switch>English</button>
+        </nav>
+      </header>
+      <main class="inner-main">
+        <a class="back-link" href="./index.html" data-i18n="categoryPage.back">返回首页</a>
+        <p class="eyebrow" data-i18n="exchange.eyebrow">EXCHANGE</p>
+        <h1 data-i18n="exchange.title">交流</h1>
+        <p class="page-intro" data-i18n="exchange.intro">
+          欢迎留下你的想法。留言将匿名提交，仅站点管理员可以查看。
+        </p>
+        <section class="form-panel">
+          <form class="message-form" id="message-form">
+            <label for="message" data-i18n="exchange.label">留言内容</label>
+            <textarea id="message" name="message" maxlength="2000" required data-i18n-placeholder="exchange.placeholder"></textarea>
+            <label class="honeypot" for="website">Website</label>
+            <input class="honeypot" id="website" name="website" tabindex="-1" autocomplete="off" />
+            <button class="primary-button" type="submit" data-i18n="exchange.submit">匿名提交</button>
+            <p class="form-status" id="form-status" role="status"></p>
+            <p class="form-note" data-i18n="exchange.note">请勿提交密码、验证码或其他敏感信息。</p>
+          </form>
+        </section>
+      </main>
+      <footer class="inner-footer">
+        <p>© 2026 Xu Notes</p>
+        <a href="./index.html#about" data-i18n="about.title">关于本站</a>
+      </footer>
+    </div>
+    <script src="./config.js"></script>
+    <script src="./site.js"></script>
+    <script src="./exchange.js"></script>
+  </body>
+</html>

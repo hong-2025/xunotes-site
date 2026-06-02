@@ -1,27 +1,22 @@
 # Xu Notes
 
-一个可直接发布到 GitHub Pages 的静态个人主页。
+`xunotes.com` 的个人网站。静态页面发布在 GitHub Pages，匿名留言使用
+Cloudflare Worker 和 D1 数据库保存。
 
-## 发布前修改
+## 页面
 
-在 `index.html` 中替换站点名称、简介和邮箱。当前邮箱
-`hello@xunotes.com` 只是占位内容；在配置邮箱服务之前不会自动收信。
+- `index.html`：中英文双语首页
+- `category.html?category=investment`：栏目二级页
+- `exchange.html`：匿名留言页
+- `admin-messages.html`：隐藏留言管理页，不在网站导航中显示
 
-## 发布到 GitHub Pages
+## GitHub Pages
 
-1. 在 GitHub 右上角头像菜单中打开 `Settings` > `Pages`。
-2. 在 `Verified domains` 中选择 `Add a domain`，填写 `xunotes.com`。
-3. 按 GitHub 页面提示，在 Cloudflare 添加 TXT 记录。验证成功后保留该记录。
-4. 在 GitHub 新建公开仓库，建议命名为 `xunotes-site`。
-5. 将本目录中的文件上传到仓库根目录。
-6. 打开仓库 `Settings` > `Pages`。
-7. 在 `Build and deployment` 中选择 `Deploy from a branch`。
-8. 选择 `main` 分支和 `/(root)` 目录，然后保存。
-9. 在 `Custom domain` 中填写 `www.xunotes.com` 并保存。
+网站仓库：`https://github.com/hong-2025/xunotes-site`
+
+自定义域名：`www.xunotes.com`
 
 ## Cloudflare DNS
-
-先完成 GitHub Pages 的 `Custom domain` 保存，再添加 DNS 记录。
 
 | Type | Name | Content |
 | --- | --- | --- |
@@ -31,7 +26,24 @@
 | A | @ | 185.199.111.153 |
 | CNAME | www | hong-2025.github.io |
 
-第一轮配置时建议将 Cloudflare 的 `Proxy status` 设为 `DNS only`。
+所有记录保持 `DNS only`。
 
-DNS 生效后，在 GitHub Pages 设置中打开 `Enforce HTTPS`。DNS 更新可能需要
-最长 24 小时，HTTPS 选项也可能不会立刻出现。
+## 留言服务
+
+留言服务代码位于 `worker/`。部署后，将 Worker 地址写入 `config.js` 中的
+`messageApiUrl`。
+
+管理员口令通过 Worker Secret `ADMIN_TOKEN` 保存，不应写入仓库。
+
+部署命令：
+
+```powershell
+cd worker
+npm install
+npx wrangler login
+npm run db:create
+# 将 D1 database_id 写入 wrangler.toml
+npm run db:init
+npm run secret:set
+npm run deploy
+```

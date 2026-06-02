@@ -1,0 +1,15 @@
+{
+  "name": "xunotes-messages",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "db:create": "wrangler d1 create xunotes-messages",
+    "db:init": "wrangler d1 execute xunotes-messages --remote --file=./schema.sql",
+    "secret:set": "wrangler secret put ADMIN_TOKEN"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

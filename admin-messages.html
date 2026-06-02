@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>留言管理 | Xu Notes</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="./index.html">Xu Notes</a>
+        <nav class="site-nav">
+          <button class="language-switch" type="button" data-language-switch>English</button>
+        </nav>
+      </header>
+      <main class="inner-main">
+        <a class="back-link" href="./index.html" data-i18n="categoryPage.back">返回首页</a>
+        <p class="eyebrow" data-i18n="admin.eyebrow">PRIVATE</p>
+        <h1 data-i18n="admin.title">留言管理</h1>
+        <p class="page-intro" data-i18n="admin.intro">
+          此页面不在网站导航中显示。请输入管理员口令查看留言。
+        </p>
+        <section class="admin-panel">
+          <form class="admin-toolbar" id="admin-form">
+            <input id="admin-token" type="password" required data-i18n-placeholder="admin.placeholder" />
+            <button class="primary-button" type="submit" data-i18n="admin.load">查看留言</button>
+          </form>
+          <p class="form-status" id="admin-status"></p>
+          <div class="admin-list" id="admin-list"></div>
+        </section>
+      </main>
+    </div>
+    <script src="./config.js"></script>
+    <script src="./site.js"></script>
+    <script src="./admin-messages.js"></script>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+name = "xunotes-messages"
+main = "src/index.js"
+compatibility_date = "2026-06-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "xunotes-messages"
+database_id = "e01fd73a-db85-4557-8a45-6b8a9674d9d7"
