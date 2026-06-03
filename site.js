@@ -28,11 +28,18 @@ const XuNotes = (() => {
         back: "返回首页",
         empty: "这个栏目正在整理中，新的内容会陆续发布。",
       },
+      techNote: {
+        eyebrow: "TECH NOTE",
+        back: "返回技术栏目",
+        meta: "知识点",
+        viewDetails: "查看完整内容",
+      },
       investment: {
         eyebrow: "INVESTMENT NOTE",
         back: "返回投资栏目",
         viewDetails: "查看详细信息",
         thesis: "投资逻辑",
+        placeholder: "具体内容待补充。",
         disclaimer: "本页仅为个人投资记录，不构成投资建议。",
       },
       exchange: {
@@ -89,11 +96,18 @@ const XuNotes = (() => {
         back: "Back to home",
         empty: "This section is being organized. New notes will be published here.",
       },
+      techNote: {
+        eyebrow: "TECH NOTE",
+        back: "Back to technology",
+        meta: "Knowledge note",
+        viewDetails: "View full note",
+      },
       investment: {
         eyebrow: "INVESTMENT NOTE",
         back: "Back to investing",
         viewDetails: "View details",
         thesis: "Investment thesis",
+        placeholder: "Detailed content will be added later.",
         disclaimer: "This page is a personal investment note and does not constitute investment advice.",
       },
       exchange: {

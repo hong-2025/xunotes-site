@@ -7,7 +7,6 @@
     document.querySelector("#investment-title").textContent =
       investment.code ? `${investment.name} ${investment.code}` : investment.name;
     document.querySelector("#investment-status").textContent = investment.status;
-    document.querySelector("#investment-summary").textContent = investment.summary;
 
     const tags = document.querySelector("#investment-tags");
     tags.replaceChildren();
@@ -15,14 +14,6 @@
       const item = document.createElement("span");
       item.textContent = tag;
       tags.append(item);
-    });
-
-    const thesis = document.querySelector("#investment-thesis");
-    thesis.replaceChildren();
-    investment.thesis.forEach((item) => {
-      const entry = document.createElement("li");
-      entry.textContent = item;
-      thesis.append(entry);
     });
   }
 

@@ -15,6 +15,32 @@
     const list = document.querySelector("#article-list");
     list.replaceChildren();
 
+    if (category === "technology") {
+      XuNotesTechNotes.all().forEach((note) => {
+        const card = document.createElement("article");
+        card.className = "article-card knowledge-card";
+
+        const title = document.createElement("h2");
+        const link = document.createElement("a");
+        link.href = `./tech-note.html?note=${note.id}`;
+        link.textContent = note.title;
+        title.append(link);
+
+        const meta = document.createElement("p");
+        meta.className = "knowledge-meta";
+        meta.textContent = XuNotes.translate("techNote.meta");
+
+        const action = document.createElement("a");
+        action.className = "card-action";
+        action.href = `./tech-note.html?note=${note.id}`;
+        action.textContent = XuNotes.translate("techNote.viewDetails");
+
+        card.append(title, meta, action);
+        list.append(card);
+      });
+      return;
+    }
+
     if (category !== "investment") {
       const empty = document.createElement("p");
       empty.className = "empty-state";
@@ -24,9 +50,8 @@
     }
 
     XuNotesInvestments.all().forEach((investment) => {
-      const card = document.createElement("a");
+      const card = document.createElement("article");
       card.className = "article-card investment-card";
-      card.href = `./investment.html?asset=${investment.id}`;
 
       const heading = document.createElement("div");
       heading.className = "investment-heading";
@@ -53,14 +78,24 @@
         tags.append(item);
       });
 
-      const summary = document.createElement("p");
-      summary.textContent = investment.summary;
+      const thesisTitle = document.createElement("h3");
+      thesisTitle.className = "investment-thesis-title";
+      thesisTitle.textContent = XuNotes.translate("investment.thesis");
 
-      const action = document.createElement("span");
+      const thesis = document.createElement("ol");
+      thesis.className = "investment-thesis-list";
+      investment.thesis.forEach((item) => {
+        const entry = document.createElement("li");
+        entry.textContent = item;
+        thesis.append(entry);
+      });
+
+      const action = document.createElement("a");
       action.className = "card-action";
+      action.href = `./investment.html?asset=${investment.id}`;
       action.textContent = XuNotes.translate("investment.viewDetails");
 
-      card.append(heading, tags, summary, action);
+      card.append(heading, tags, thesisTitle, thesis, action);
       list.append(card);
     });
   }

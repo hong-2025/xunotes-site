@@ -129,10 +129,10 @@ p {
 
 h1 {
   margin-bottom: 14px;
-  font-size: clamp(2.5rem, 5vw, 4.7rem);
+  font-size: clamp(2rem, 3.6vw, 3.25rem);
   font-weight: 600;
-  letter-spacing: -0.08em;
-  line-height: 1.05;
+  letter-spacing: -0.045em;
+  line-height: 1.12;
 }
 
 .home-intro > p:last-child,
@@ -234,7 +234,7 @@ a.category-card:hover {
 }
 
 .inner-main h1 {
-  font-size: clamp(2.5rem, 6vw, 4.8rem);
+  font-size: clamp(1.9rem, 4vw, 3rem);
 }
 
 .page-intro {
@@ -270,17 +270,6 @@ a.category-card:hover {
   margin-bottom: 0;
   color: var(--muted);
   font-size: 0.9rem;
-}
-
-.investment-card {
-  color: var(--ink);
-  text-decoration: none;
-  transition: 160ms ease;
-}
-
-.investment-card:hover {
-  border-color: rgba(183, 100, 63, 0.46);
-  transform: translateY(-2px);
 }
 
 .investment-heading,
@@ -332,6 +321,7 @@ a.category-card:hover {
   margin-top: 14px;
   color: var(--accent);
   font-size: 0.82rem;
+  text-decoration: none;
 }
 
 .investment-detail {
@@ -342,7 +332,23 @@ a.category-card:hover {
   margin-bottom: 0;
 }
 
-.thesis-panel {
+.investment-thesis-title {
+  margin: 16px 0 7px;
+  font-size: 0.95rem;
+}
+
+.investment-thesis-list {
+  margin: 0;
+  padding-left: 1.3rem;
+}
+
+.investment-thesis-list li {
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.detail-placeholder {
   margin-top: 28px;
   padding: 22px;
   border: 1px solid var(--line);
@@ -350,29 +356,76 @@ a.category-card:hover {
   background: var(--surface);
 }
 
-.thesis-panel h2 {
-  margin-bottom: 12px;
-  font-size: 1.25rem;
-}
-
-.thesis-panel ol {
-  margin: 0;
-  padding-left: 1.4rem;
-}
-
-.thesis-panel li {
-  margin-bottom: 10px;
-  color: var(--muted);
-}
-
-.thesis-panel li:last-child {
+.detail-placeholder p {
   margin-bottom: 0;
+  color: var(--muted);
 }
 
 .investment-disclaimer {
   margin-top: 16px;
   color: var(--muted);
   font-size: 0.78rem;
+}
+
+.knowledge-card h2 a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.knowledge-card h2 a:hover {
+  color: var(--accent);
+}
+
+.knowledge-meta {
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.note-detail {
+  max-width: 860px;
+}
+
+.note-content {
+  display: grid;
+  gap: 18px;
+}
+
+.note-content section {
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+.note-content h2 {
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+}
+
+.note-content h3 {
+  margin: 16px 0 8px;
+  font-size: 1rem;
+}
+
+.note-content p,
+.note-content li {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.note-content ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.note-content pre {
+  overflow-x: auto;
+  margin: 10px 0;
+  padding: 10px 12px;
+  border-radius: 9px;
+  color: var(--ink);
+  background: var(--surface-strong);
+  font-size: 0.9rem;
 }
 
 .message-form {
