@@ -41,6 +41,30 @@
       return;
     }
 
+    if (category === "food") {
+      const card = document.createElement("article");
+      card.className = "article-card knowledge-card";
+
+      const title = document.createElement("h2");
+      const link = document.createElement("a");
+      link.href = "./recipes.html";
+      link.textContent = XuNotes.translate("recipe.sectionTitle");
+      title.append(link);
+
+      const meta = document.createElement("p");
+      meta.className = "knowledge-meta";
+      meta.textContent = XuNotes.translate("recipe.sectionMeta");
+
+      const action = document.createElement("a");
+      action.className = "card-action";
+      action.href = "./recipes.html";
+      action.textContent = XuNotes.translate("recipe.viewRecipes");
+
+      card.append(title, meta, action);
+      list.append(card);
+      return;
+    }
+
     if (category !== "investment") {
       const empty = document.createElement("p");
       empty.className = "empty-state";
