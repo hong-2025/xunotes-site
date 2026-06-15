@@ -381,6 +381,26 @@ a.category-card:hover {
   font-size: 0.86rem;
 }
 
+.summary-card {
+  display: grid;
+  gap: 8px;
+}
+
+.summary-card p {
+  color: var(--ink);
+  font-size: 0.98rem;
+  line-height: 1.75;
+}
+
+.summary-card .summary-meta {
+  margin-bottom: 0;
+  color: var(--accent);
+  font-family: Arial, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
 .note-detail {
   max-width: 860px;
 }

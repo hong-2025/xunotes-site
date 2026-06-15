@@ -15,6 +15,7 @@
 - `tech-note.html`：技术知识点三级页模板。
 - `tech-note.js`：技术知识点三级页渲染逻辑。
 - `tech-notes.js`：技术知识点数据。
+- `summaries.js`：摘要栏目数据。
 - `recipes.html`：美食下的菜谱三级页。
 - `recipes-page.js`：菜谱列表页渲染逻辑。
 - `recipe.html`：单个菜谱四级详情页模板。
@@ -52,7 +53,7 @@
 ## 页面层级
 
 - 首页：`index.html`
-- 二级栏目页：`category.html?category=investment`、`category.html?category=technology`
+- 二级栏目页：`category.html?category=investment`、`category.html?category=technology`、`category.html?category=summary`
 - 三级详情页：`investment.html?asset=...`、`tech-note.html?note=...`、`recipes.html`
 - 四级详情页：`recipe.html?recipe=...`
 

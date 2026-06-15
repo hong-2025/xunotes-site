@@ -13,6 +13,7 @@ const XuNotes = (() => {
         food: "美食",
         travel: "旅游",
         health: "健康",
+        summary: "摘要",
         other: "其它",
       },
       categoryDescriptions: {
@@ -22,6 +23,7 @@ const XuNotes = (() => {
         food: "餐桌、食材与味道。",
         travel: "行程、见闻与照片。",
         health: "健康习惯与资料整理。",
+        summary: "随手记录的判断、问题和观察。",
         other: "不属于固定分类的记录。",
       },
       categoryPage: {
@@ -94,6 +96,7 @@ const XuNotes = (() => {
         food: "Food",
         travel: "Travel",
         health: "Health",
+        summary: "Summary",
         other: "Other",
       },
       categoryDescriptions: {
@@ -103,6 +106,7 @@ const XuNotes = (() => {
         food: "Meals, ingredients, and flavors.",
         travel: "Journeys, observations, and photos.",
         health: "Healthy habits and useful references.",
+        summary: "Brief judgments, questions, and observations.",
         other: "Notes that do not fit a fixed category.",
       },
       categoryPage: {
@@ -164,7 +168,7 @@ const XuNotes = (() => {
     },
   };
 
-  const categoryKeys = ["investment", "technology", "food", "travel", "health", "other"];
+  const categoryKeys = ["investment", "technology", "food", "travel", "health", "summary", "other"];
 
   function getLanguage() {
     return localStorage.getItem("xu-notes-language") === "en" ? "en" : "zh";

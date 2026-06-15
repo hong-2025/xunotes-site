@@ -65,6 +65,20 @@
       return;
     }
 
+    if (category === "summary") {
+      XuNotesSummaries.all().forEach((summary) => {
+        const card = document.createElement("article");
+        card.className = "article-card summary-card";
+
+        const content = document.createElement("p");
+        content.textContent = summary;
+
+        card.append(content);
+        list.append(card);
+      });
+      return;
+    }
+
     if (category !== "investment") {
       const empty = document.createElement("p");
       empty.className = "empty-state";
